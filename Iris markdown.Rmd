@@ -11,10 +11,16 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ```{r}
 library(tidyverse)
- iris
+
+ View(iris)
  
 iris_scatter <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width))+
-  geom_point()
+  geom_point(aes(color = Petal.Length))+ 
+  xlab("Petal Lenght")+
+  ylab("Petal Width") +
+  ggtitle("Iris petal length vs width") +
+  facet_wrap(~Species, scale = "free")
+
 
 iris_scatter
 ```
