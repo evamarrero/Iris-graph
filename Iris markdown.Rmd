@@ -1,0 +1,21 @@
+---
+title: "irislab-7"
+author: "Eva Marrero"
+date: "November 14, 2018"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r}
+library(tidyverse)
+ iris
+ 
+iris_scatter <- ggplot(iris, aes(x = Petal.Length, y = Petal.Width))+
+  geom_point()
+
+iris_scatter
+```
+
